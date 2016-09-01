@@ -28,19 +28,19 @@ gap = read.csv("https://bit.ly/gap_data_upd")
 
 ## Exercise 1
 
-Visualize the relationship between life expectancy and GDP per capita in 2007 using a scatter plot.
+Visualize the relationship between life expectancy and population in 1952 using a scatter plot.
 
 ```{r ex1}
-gap07 = filter(gap, year == 2007)
+gap52 = filter(gap, year == 1952)
 
-ggplot(gap07, aes(x=lifeExp, y=gdpPercap)) + geom_point()
+ggplot(gap52, aes(x=lifeExp, y=pop)) + geom_point()
 ```
 
 
 ### Exercise 2
 
-Visualize the relationship between life expectancy and GDP per capita in 2007 using a scatter plot and color the points by continent.
+Visualize the relationship between life expectancy and population in 2007 using a scatter plot and size the points by gdp per capita
 
 ```{r ex2}
-ggplot(gap07, aes(x=lifeExp, y=gdpPercap, color=continent)) + geom_point()
+ggplot(gap52, aes(x=lifeExp, y=pop, color=continent, size=gdpPercap)) + geom_point()
 ```
